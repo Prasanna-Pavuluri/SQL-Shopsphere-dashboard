@@ -22,3 +22,19 @@ async function load(name){
 document.querySelectorAll("#tabs button").forEach(b=>b.addEventListener("click",()=>load(b.dataset.table)));
 document.getElementById("refresh").addEventListener("click",()=>load(current));
 health(); load("products");
+
+document.querySelectorAll("#query-modules button").forEach(b =>
+  b.addEventListener("click", () => showQuery(b.dataset.module))
+);
+
+document.getElementById("queries-button").addEventListener("click", () => {
+  document.getElementById("data-panel").style.display = "none";
+  document.getElementById("queries-panel").style.display = "block";
+});
+
+document.querySelectorAll("#tabs button[data-table]").forEach(b =>
+  b.addEventListener("click", () => {
+    document.getElementById("data-panel").style.display = "block";
+    document.getElementById("queries-panel").style.display = "none";
+  })
+);
