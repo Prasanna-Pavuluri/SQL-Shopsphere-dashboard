@@ -28,9 +28,10 @@
       <button data-table="payments">Payments</button>
       <button data-table="reviews">Reviews</button>
       <button data-table="audit_log">Audit Log</button>
+      <button id="queries-button">SQL Queries</button>
     </nav>
 
-    <section class="panel">
+    <section class="panel" id="data-panel">
       <div class="panel-head">
         <h2 id="table-title">Products</h2>
         <button id="refresh">Refresh</button>
@@ -40,11 +41,39 @@
         <table><thead id="thead"></thead><tbody id="tbody"></tbody></table>
       </div>
     </section>
+
+    <section class="panel" id="queries-panel" style="display:none;">
+      <div class="panel-head">
+        <h2>SQL Queries</h2>
+      </div>
+
+      <div id="query-modules">
+        <button data-module="module1">Module 1 - Database</button>
+        <button data-module="module23">Modules 2-3 - Tables & Constraints</button>
+        <button data-module="module4">Module 4 - Insert Values</button>
+        <button data-module="module5">Module 5 - DML</button>
+        <button data-module="module6">Module 6 - Business Queries</button>
+        <button data-module="module7">Module 7 - Joins</button>
+        <button data-module="module8">Module 8 - Subqueries</button>
+        <button data-module="module9">Module 9 - Views</button>
+        <button data-module="module10">Module 10 - Stored Procedures</button>
+        <button data-module="module11">Module 11 - Triggers</button>
+        <button data-module="module12">Module 12 - TCL</button>
+        <button data-module="module13">Module 13 - String Functions</button>
+        <button data-module="module14">Module 14 - Date Functions</button>
+        <button data-module="dcl">DCL - Users & Privileges</button>
+        <button data-module="bonus">Bonus - Place Order</button>
+      </div>
+
+      <pre id="query-display">Select a module to view the SQL queries.</pre>
+    </section>
   </main>
 
   <footer>
     <p>ShopSphere • MySQL • Aiven deployment</p>
   </footer>
+
+  <script src="queries.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
