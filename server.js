@@ -22,7 +22,7 @@ const allowed = {
   products: "SELECT product_id, product_name, category_id, stock, price FROM products ORDER BY product_id LIMIT 100",
   users: "SELECT user_id, name, email, phno FROM users ORDER BY user_id LIMIT 100",
   orders: "SELECT order_id, user_id, order_date FROM orders ORDER BY order_date DESC, order_id DESC LIMIT 100",
-  payments: "SELECT payment_id, order_id, payment_mode, payment_status, payment_date, amount FROM payments ORDER BY payment_id DESC LIMIT 100",
+  payments: "SELECT payment_id, order_id, payment_mode, paymnet_status, payment_date, amount FROM payments ORDER BY payment_id DESC LIMIT 100",
   reviews: "SELECT review_id, user_id, order_id, product_id, rating, feedback FROM reviews ORDER BY review_id DESC LIMIT 100",
   audit_log: "SELECT log_id, action, table_name, old_value, new_value, action_time, message FROM audit_log ORDER BY action_time DESC, log_id DESC LIMIT 100"
 };
