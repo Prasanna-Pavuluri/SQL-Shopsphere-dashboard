@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ShopSphere Database Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div>
+      <h1>ShopSphere</h1>
+      <p>Database Management System Dashboard</p>
+    </div>
+    <span id="status">Checking database…</span>
+  </header>
+
+  <main>
+    <section class="intro">
+      <h2>ShopSphere Database</h2>
+      <p>Live data from the deployed MySQL database.</p>
+    </section>
+
+    <nav id="tabs">
+      <button data-table="products">Products</button>
+      <button data-table="users">Customers</button>
+      <button data-table="orders">Orders</button>
+      <button data-table="payments">Payments</button>
+      <button data-table="reviews">Reviews</button>
+      <button data-table="audit_log">Audit Log</button>
+    </nav>
+
+    <section class="panel">
+      <div class="panel-head">
+        <h2 id="table-title">Products</h2>
+        <button id="refresh">Refresh</button>
+      </div>
+      <div id="message"></div>
+      <div class="table-wrap">
+        <table><thead id="thead"></thead><tbody id="tbody"></tbody></table>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>ShopSphere • MySQL • Aiven deployment</p>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>
